@@ -17,6 +17,10 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+<<<<<<< HEAD
     path('squirrel_sightings/',include('Squirrel_Sightings.urls')),
+=======
+    path('squirrel_sightings/', include('Squirrel_Sightings.urls')),   
+>>>>>>> 4878417dc9c0c79d150b1703348f3d36e6b9b8b0
     path('admin/', admin.site.urls),
 ]
