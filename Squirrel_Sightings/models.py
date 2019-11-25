@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.transalation import gettext as _
+from django.utils.translation import gettext as _
 
 ###We are missing location and specific location in this model
 class Squirrels(models.Model):
@@ -63,7 +63,7 @@ class Squirrels(models.Model):
         )
 
     Primary_Fur_Color = models.CharField(
-            max_lenth=20,
+            max_length=20,
             choices=COLOR_CHOICES,
             help_text=_("Color of the squirrel"),
         )
@@ -74,7 +74,7 @@ class Squirrels(models.Model):
             help_text=_('Is it running?'),
             )
 
-     Chasing = models.CharField(
+    Chasing = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it chasing?'),
