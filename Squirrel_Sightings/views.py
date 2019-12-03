@@ -7,4 +7,16 @@ def index(request):
     context = {"Squirrel Sightings": Squirrels.objects.all(), "field_names": Squirrels._meta.get_fields()}
     return render(request, 'Squirrel_Sightings/index.html',context)
 
-# Create your views here.
+def sightings(request):
+    sightings = Squirrels.objects.all()
+    context = {
+            'sightings': sightings,
+    }
+    return render(request, 'Squirrel_Sightings/sightings.html', context)
+
+def coordinates(request):
+    sightings  = Squirrels.objects.all()[:100]
+    context = {
+            'sightings' : sightings,
+    }
+    return render(request, 'Squirrel_Sightings/map.html', context)
