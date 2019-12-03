@@ -47,9 +47,9 @@ class Squirrels(models.Model):
             (OTHER, 'Other'),
         )
 
-    Latitude = models.IntegerField()
+    Latitude = models.FloatField()
 
-    Longitude = models.IntegerField()
+    Longitude = models.FloatField()
 
     Unique_Squirrel_Id = models.CharField(
             max_length=30,
@@ -174,7 +174,7 @@ class Squirrels(models.Model):
             help_text=_('Does it run away?'),
         )
     def __str__(self):
-        return self.Unique_Squirrel_ID
+        return self.Unique_Squirrel_Id
 
 
 # Create your models here.
