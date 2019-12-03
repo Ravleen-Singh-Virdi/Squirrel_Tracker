@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.transalation import gettext as _
+from django.utils.translation import gettext as _
 
 ###We are missing location and specific location in this model
 class Squirrels(models.Model):
@@ -14,6 +14,9 @@ class Squirrels(models.Model):
     BLACK = 'black'
     CINNAMON = 'cinnamon'
     GRAY = 'gray'
+    GROUND_PLANE = 'ground plane'
+    ABOVE_GROUND = 'above ground'
+    OTHER = 'other'
 
     BOOL_CHOICES = (
             (TRUE, 'True'),
@@ -36,6 +39,12 @@ class Squirrels(models.Model):
             (BLACK, 'Black'),
             (CINNAMON, 'Cinnamon'),
             (GRAY, 'Gray'),
+        )
+
+    LOC_CHOICES = (
+            (GROUND_PLANE, ' Ground Plane'),
+            (ABOVE_GROUND, 'Above Ground'),
+            (OTHER, 'Other'),
         )
 
     Latitude = models.IntegerField()
@@ -62,8 +71,20 @@ class Squirrels(models.Model):
             help_text=_("Age of the Squirrel"),
         )
 
+    Location = models.CharField(
+            max_length=100,
+            choices=LOC_CHOICES,
+            default=OTHER,
+            help_text=_("Location of the Squirrel"),
+        )
+
+    Specific_Location = models.CharField(
+            max_length=30,
+            help_text=_("Specific Location"),
+        )
+
     Primary_Fur_Color = models.CharField(
-            max_lenth=20,
+            max_length=20,
             choices=COLOR_CHOICES,
             help_text=_("Color of the squirrel"),
         )
@@ -74,7 +95,7 @@ class Squirrels(models.Model):
             help_text=_('Is it running?'),
             )
 
-     Chasing = models.CharField(
+    Chasing = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it chasing?'),
@@ -152,11 +173,8 @@ class Squirrels(models.Model):
             choices=BOOL_CHOICES,
             help_text=_('Does it run away?'),
         )
-
-
-
-
-
+    def __str__(self):
+        return self.Unique_Squirrel_ID
 
 
 # Create your models here.
