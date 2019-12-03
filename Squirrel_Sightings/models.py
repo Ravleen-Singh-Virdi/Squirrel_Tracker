@@ -14,6 +14,9 @@ class Squirrels(models.Model):
     BLACK = 'black'
     CINNAMON = 'cinnamon'
     GRAY = 'gray'
+    GROUND_PLANE = 'ground plane'
+    ABOVE_GROUND = 'above ground'
+    OTHER = 'other'
 
     BOOL_CHOICES = (
             (TRUE, 'True'),
@@ -38,6 +41,12 @@ class Squirrels(models.Model):
             (GRAY, 'Gray'),
         )
 
+    LOC_CHOICES = (
+            (GROUND_PLANE, ' Ground Plane'),
+            (ABOVE_GROUND, 'Above Ground'),
+            (OTHER, 'Other'),
+        )
+
     Latitude = models.IntegerField()
 
     Longitude = models.IntegerField()
@@ -60,6 +69,18 @@ class Squirrels(models.Model):
             max_length=50,
             choices=AGE_CHOICES,
             help_text=_("Age of the Squirrel"),
+        )
+
+    Location = models.CharField(
+            max_length=100,
+            choices=LOC_CHOICES,
+            default=OTHER,
+            help_text=_("Location of the Squirrel"),
+        )
+
+    Specific_Location = models.CharField(
+            max_length=30,
+            help_text=_("Specific Location"),
         )
 
     Primary_Fur_Color = models.CharField(
@@ -152,11 +173,8 @@ class Squirrels(models.Model):
             choices=BOOL_CHOICES,
             help_text=_('Does it run away?'),
         )
-
-
-
-
-
+    def __str__(self):
+        return self.Unique_Squirrel_ID
 
 
 # Create your models here.
