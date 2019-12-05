@@ -1,4 +1,4 @@
-X,Y,Unique Squirrel ID,Shift,Date,Age,Primary Fur Color,Location,Specific Location,Running,Chasing,Climbing,Eating,Foraging,Other Activities,Kuks,Quaas,Moans,Tail flags,Tail twitches,Approaches,Indifferent,Runs from
+X,Y,UniqueSquirrelID,Shift,Date,Age,PrimaryFurColor,Location,SpecificLocation,Running,Chasing,Climbing,Eating,Foraging,OtherActivities,Kuks,Quaas,Moans,Tailflags,Tailtwitches,Approaches,Indifferent,Runsfrom
 -73.95613449,40.79408239,37F-PM-1014-03,PM,10142018,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 -73.95704377,40.79485094,37E-PM-1006-03,PM,10062018,Adult,Gray,Ground Plane,,TRUE,FALSE,FALSE,FALSE,FALSE,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
 -73.97683118,40.76671781,2E-AM-1010-03,AM,10102018,Adult,Cinnamon,Above Ground,,FALSE,FALSE,TRUE,FALSE,FALSE,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
