@@ -3,6 +3,10 @@ from django.shortcuts import render, get_object_or_404, redirect
 from . models import Squirrels
 from .forms import SquirrelForm
 
+def index(request):
+    context = {"sightings": Squirrels.objects.all(), "field_names": Squirrels._meta.get_fields()}
+    return render(request, 'Squirrel_Sightings/index.html',context)
+
 def all_squirrels(request):
     squirrels = Squirrels.objects.all()
     context = {
