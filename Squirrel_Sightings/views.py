@@ -3,12 +3,12 @@ from django.shortcuts import render, get_object_or_404, redirect
 from . models import Squirrels
 from .forms import SquirrelForm
 
-def all_squirrels(request):
+def index(request):
     squirrels = Squirrels.objects.all()
     context = {
             "squirrels": squirrels,
         }
-    return render(request, 'Squirrel_Sightings/all.html',context)
+    return render(request, 'Squirrel_Sightings/index.html',context)
 
 def sightings(request):
     squirrels = Squirrels.objects.all()
@@ -25,13 +25,13 @@ def coordinates(request):
     return render(request, 'Squirrel_Sightings/map.html', context)
 
 def edit_squirrel(request, Unique_Squirrel_Id):
-    squirrel = Squirrels.objects.get(id=Unique_Squirrel_Id)
+    squirrel = Squirrels.objects.get(Unique_Squirrel_Id=Unique_Squirrel_Id)
     if request.method == 'POST':
         #check the form data
         form = SquirrelForm(request.POST, instance = squirrel)
         if form.is_valid():
             form.save()
-            return redirect(f'/Squirrel_Sightings/{Unique_Squirrel_Id}')
+            return redirect(f'/Squirrel_Sightings/edit.html',context)
     else:
         form = SquirrelForm(instance=squirrel)
     context = {
