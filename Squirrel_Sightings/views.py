@@ -4,9 +4,13 @@ from . models import Squirrels
 from .forms import SquirrelForm
 
 def index(request):
+<<<<<<< HEAD
     context = {
             "sightings":Squirrels.objects.all(),"field_names":Squirrels._meta.get_fields()
         }
+=======
+    context = {"sightings": Squirrels.objects.all(), "field_names": Squirrels._meta.get_fields()}
+>>>>>>> 24cfea878f2404de42106825a0bde96780e68154
     return render(request, 'Squirrel_Sightings/index.html',context)
 
 def sightings(request):
