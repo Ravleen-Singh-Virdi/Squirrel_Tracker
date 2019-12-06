@@ -9,6 +9,7 @@ def index(request):
     context = {"sightings": Squirrels.objects.all(), "field_names": Squirrels._meta.get_fields()}
     return render(request, 'Squirrel_Sightings/index.html',context)
 
+<<<<<<< HEAD
 def all_squirrels(request):
 >>>>>>> b2063779c1f4a19dc126db2bd0a489f79743795e
     squirrels = Squirrels.objects.all()
@@ -17,6 +18,8 @@ def all_squirrels(request):
         }
     return render(request, 'Squirrel_Sightings/index.html',context)
 
+=======
+>>>>>>> 24cfea878f2404de42106825a0bde96780e68154
 def sightings(request):
     squirrels = Squirrels.objects.all()
     context = {
