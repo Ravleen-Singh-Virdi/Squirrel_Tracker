@@ -74,6 +74,3 @@ class Command(BaseCommand):
                     print(str(ex))
 
     def handle(self, *args, **options):
-        file_path = options['file_path']
-        self.import_data_from_csv(file_path)
-
