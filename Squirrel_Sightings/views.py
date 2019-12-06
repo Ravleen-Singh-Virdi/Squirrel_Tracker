@@ -9,6 +9,13 @@ def index(request):
         }
     return render(request, 'Squirrel_Sightings/index.html',context)
 
+def all_squirrels(request):
+    squirrels = Squirrels.objects.all()
+    context = {
+            "squirrels": squirrels,
+        }
+    return render(request, 'Squirrel_Sightings/index.html',context)
+
 def sightings(request):
     squirrels = Squirrels.objects.all()
     context = {
@@ -30,7 +37,7 @@ def edit_squirrel(request, Unique_Squirrel_Id):
         form = SquirrelForm(request.POST, instance = squirrel)
         if form.is_valid():
             form.save()
-            return redirect(f'/Squirrel_Sightings/{Unique_Squirrel_Id}')
+            return redirect(f'/Squirrel_Sightings/edit.html',context)
     else:
         form = SquirrelForm(instance=squirrel)
     context = {
