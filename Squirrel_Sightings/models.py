@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
-###We are missing location and specific location in this model
 class Squirrels(models.Model):
     TRUE = 'true'
     FALSE = 'false'
@@ -46,36 +45,37 @@ class Squirrels(models.Model):
             (ABOVE_GROUND, 'Above Ground'),
             (OTHER, 'Other'),
         )
-
-    Latitude = models.FloatField()
-
-    Longitude = models.FloatField()
-
+    
     Unique_Squirrel_Id = models.CharField(
             max_length=30,
-            help_text=_("Squirrel's Unique ID"),
+            help_text=_("Unique Squirrel ID"),
         )
+    
+    Latitude = models.FloatField(help_text=_("Latitude"),)
+
+    Longitude = models.FloatField(help_text=_("Longitude"),)
 
     Shift = models.CharField(
             max_length=2,
             choices=SHIFT_CHOICES,
+            help_text=_("Shift"),
         )
 
     Date = models.DateField(
-            help_text=_("Date of the sighting"),
+            help_text=_("Date"),
         )
 
     Age = models.CharField(
             max_length=50,
             choices=AGE_CHOICES,
-            help_text=_("Age of the Squirrel"),
+            help_text=_("Age"),
         )
 
     Location = models.CharField(
             max_length=100,
             choices=LOC_CHOICES,
             default=OTHER,
-            help_text=_("Location of the Squirrel"),
+            help_text=_("Location"),
         )
 
     Specific_Location = models.CharField(
@@ -86,92 +86,92 @@ class Squirrels(models.Model):
     Primary_Fur_Color = models.CharField(
             max_length=20,
             choices=COLOR_CHOICES,
-            help_text=_("Color of the squirrel"),
+            help_text=_("Primary Fur Color"),
         )
     
     Running = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Is it running?'),
+            help_text=_('Running'),
             )
 
     Chasing = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Is it chasing?'),
+            help_text=_('Chasing'),
             )
 
 
     Climbing = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Is it climbing?'),
+            help_text=_('Climbing'),
             
             )
 
     Eating = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Is it eating?'),
+            help_text=_('Eeating'),
             )
 
     Foraging = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('is it foraging?'),
+            help_text=_('Foraging'),
             )
 
     Other_Activities = models.CharField(
             max_length=100,
-            help_text=_('What other activities is it doing?'),
+            help_text=_('Other activities'),
             )
 
     Kuks = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Does it kuks?'),
+            help_text=_('Kuks'),
             )
 
     Quaas = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Does it quaas?'),
+            help_text=_('Quaas'),
             )
 
     Moans = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Does it moan?'),
+            help_text=_('Moan'),
             )
 
     Tail_flags = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Does it flag its tail?'),
+            help_text=_('Tail Flags'),
             )
 
     Tail_twitches = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Does it twitch its tail?'),
+            help_text=_('Tail Twitch'),
             )
 
     Approaches = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Does it approach?'),
+            help_text=_('Approaches'),
             )
 
     Indifferent = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Is it indifferent?'),
+            help_text=_('Indifferent'),
             )
 
     Runs_from = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
-            help_text=_('Does it run away?'),
+            help_text=_('Run from'),
         )
     def __str__(self):
         return self.Unique_Squirrel_Id
