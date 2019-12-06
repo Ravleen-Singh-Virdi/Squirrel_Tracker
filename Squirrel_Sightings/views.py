@@ -4,15 +4,10 @@ from . models import Squirrels
 from .forms import SquirrelForm
 
 def index(request):
-    context = {"sightings": Squirrels.objects.all(), "field_names": Squirrels._meta.get_fields()}
-    return render(request, 'Squirrel_Sightings/index.html',context)
-
-def all_squirrels(request):
-    squirrels = Squirrels.objects.all()
     context = {
-            "squirrels": squirrels,
+            "sightings":Squirrels.objects.all(),"field_names":Squirrels._meta.get_fields()
         }
-    return render(request, 'Squirrel_Sightings/all.html',context)
+    return render(request, 'Squirrel_Sightings/index.html',context)
 
 def sightings(request):
     squirrels = Squirrels.objects.all()
@@ -29,7 +24,7 @@ def coordinates(request):
     return render(request, 'Squirrel_Sightings/map.html', context)
 
 def edit_squirrel(request, Unique_Squirrel_Id):
-    squirrel = Squirrels.objects.get(id=Unique_Squirrel_Id)
+    squirrel = Squirrels.objects.get(Unique_Squirrel_Id=Unique_Squirrel_Id)
     if request.method == 'POST':
         #check the form data
         form = SquirrelForm(request.POST, instance = squirrel)
@@ -42,6 +37,7 @@ def edit_squirrel(request, Unique_Squirrel_Id):
             'form':form,
         }
     return render(request, 'Squirrel_Sightings/edit.html', context)
+
 def add_squirrel(request):
     if request.method == 'POST':
         #check the form data

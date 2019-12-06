@@ -1,5 +1,15 @@
-<ul>
-    {% for sighting in sightings %}
-    <li>{{ sighting.unique_squirrel_id }}</li>
-    {% endfor %}
-</ul>
+<html>
+	<head>
+		<h1>Squirrel Sightings</h1>
+	</head>
+
+	<body>
+		<h3><a href = '/sightings/add/'>Add a New Sighting</a></h3>
+		<h3>To update an existing squirrel, click on its id below:</h3>
+		<ul>
+			{% for s in squirrels %}
+			<li> <a href = '/sightings/{{s.Unique_Squirrel_Id}}/'>{{s.Unique_Squirrel_Id}}</a></li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
