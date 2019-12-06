@@ -3,39 +3,43 @@
 <table>
 	<thead>
 		<tr>
+		  <th>ID<th>
 		  {% for field_name in field_names %} 
-		  <th> {{field_name.help_text}} </th>
+		      {% if field_name %}
+		          <th> {{field_name.help_text}} </th>
+		      {% endif %}
 		  {% endfor %}
 		</tr>
 
 	</thead>
 	<tbody>
-	  {% for sighting in Squirrels %}
-	  <tr>
-		  <td> <a href="/sightings/{{sighting.id}}">{{sighting.Unique_Squirred_Id}}</a> </td>
-		  <td>{{sighting.Age}} </td>
-		  <td>{{sighting.Color}} </td>
-		  <td>{{sighting.Latitude}} </td>
-		  <td>{{sighting.Longitude}} </td>
+          {% for sighting in sightings %}
+          <tr>
+                  <td>{{sighting.id}}</td>
+		  <td> <a href="/sightings/{{sighting.Unique_Squirrel_Id}}">{{sighting.Unique_Squirrel_Id}}</a> </td>
+                  <td>{{sighting.Latitude}} </td>
+                  <td>{{sighting.Longitude}} </td><td>{{sighting.Shift}} </td>
 		  <td>{{sighting.Date}} </td>
-		  <td>{{sighting.Location}} </td>
-		  <td>{{sighting.Specific_Location}} </td>
-		  <td>{{sighting.Running}} </td>
-		  <td>{{sighting.Chasing}} </td>
-		  <td>{{sighting.Climbing}} </td>
-		  <td>{{sighting.Eating}} </td>
-		  <td>{{sighting.Foraging}} </td>
-		  <td>{{sighting.Other_Activities}} </td>
-		  <td>{{sighting.Kuks}} </td>
-		  <td>{{sighting.Quaas}} </td>
-		  <td>{{sighting.Moans}} </td>
-		  <td>{{sighting.Tail_flags}} </td>
-		  <td>{{sighting.Tail_twitches}} </td>
-		  <td>{{sighting.Qpproaches}} </td>
-		  <td>{{sighting.Indifferent}} </td>
-		  <td>{{sighting.Runs_from}} </td>
-	  </tr>
-           {% endfor %}
+                  <td>{{sighting.Age}} </td>
+                  <td>{{sighting.Location}} </td>
+                  <td>{{sighting.Specific_Location}} </td>
+                  <td>{{sighting.Primary_Fur_Color}} </td>
+                  <td>{{sighting.Running}} </td>
+                  <td>{{sighting.Chasing}} </td>
+                  <td>{{sighting.Climbing}} </td>
+                  <td>{{sighting.Eating}} </td>
+                  <td>{{sighting.Foraging}} </td>
+                  <td>{{sighting.Other_Activities}} </td>
+                  <td>{{sighting.Kuks}} </td>
+                  <td>{{sighting.Quaas}} </td>
+                  <td>{{sighting.Moans}} </td>
+                  <td>{{sighting.Tail_flags}} </td>
+                  <td>{{sighting.Tail_twitches}} </td>
+                  <td>{{sighting.Approaches}} </td>
+                  <td>{{sighting.Indifferent}} </td>
+                  <td>{{sighting.Runs_from}} </td>
+          </tr>
+          {% endfor %}		
 	</tbody>
 </table>
 
