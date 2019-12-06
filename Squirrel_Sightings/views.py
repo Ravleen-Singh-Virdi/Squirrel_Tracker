@@ -7,13 +7,6 @@ def index(request):
     context = {"sightings": Squirrels.objects.all(), "field_names": Squirrels._meta.get_fields()}
     return render(request, 'Squirrel_Sightings/index.html',context)
 
-def sightings(request):
-    squirrels = Squirrels.objects.all()
-    context = {
-            "squirrels": squirrels,
-        }
-    return render(request, 'Squirrel_Sightings/sightings.html', context)
-
 def coordinates(request):
     squirrels  = Squirrels.objects.all()[:100]
     context = {
