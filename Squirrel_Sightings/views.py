@@ -3,25 +3,11 @@ from django.shortcuts import render, get_object_or_404, redirect
 from . models import Squirrels
 from .forms import SquirrelForm
 
-def index(request):
+def view_all(request):
     context = {
             "sightings":Squirrels.objects.all(),"field_names":Squirrels._meta.get_fields()
         }
-    return render(request, 'Squirrel_Sightings/index.html',context)
-
-def all_squirrels(request):
-    squirrels = Squirrels.objects.all()
-    context = {
-            "squirrels": squirrels,
-        }
-    return render(request, 'Squirrel_Sightings/index.html',context)
-
-def sightings(request):
-    squirrels = Squirrels.objects.all()
-    context = {
-            "squirrels": squirrels,
-        }
-    return render(request, 'Squirrel_Sightings/sightings.html', context)
+    return render(request, 'Squirrel_Sightings/view_all.html',context)
 
 def coordinates(request):
     squirrels  = Squirrels.objects.all()[:100]
@@ -67,7 +53,7 @@ def stats(request):
     juvenile_count = 0
     adult_count = 0
     running_count=0
-    climbing_count
+    climbing_count = 0
     chasing_count = 0
     foraging_count = 0
     kuks_count = 0
@@ -75,15 +61,15 @@ def stats(request):
     moans_count = 0
     tail_flags_count=0
     for s in Squirrels.objects.all():
-        if s.Running == True:
+        if s.Running == 'TRUE':
              running_count +=1
         else:
              pass
-        if s.Climbing == True:
+        if s.Climbing == 'TRUE':
              climbing_count +=1
         else:
              pass
-        if s.Chasing == True:
+        if s.Chasing == 'TRUE':
              chasing_count +=1
         else:
              pass
@@ -95,11 +81,11 @@ def stats(request):
             gray_count +=1
         else:
             pass
-        if s.Foraging == True:
+        if s.Foraging == 'TRUE':
              foraging_count +=1
         else:
              pass
-        if s.Eating == True:
+        if s.Eating == 'TRUE':
              eating_count +=1
         else:
              pass
@@ -109,37 +95,38 @@ def stats(request):
             adult_count +=1
         else:
             pass
-        if s.Kuks == True:
+        if s.Kuks == 'TRUE':
             kuks_count +=1
         else:
             pass
-        if s.Quaas ==True:
+        if s.Quaas =='TRUE':
             quaas_count +=1
         else:
             pass
-        if s.Moans == True:
+        if s.Moans == 'TRUE':
             moans_count +=1
         else:
             pass
-        if s.Tail_Flags == True:
+        if s.Tail_flags == 'TRUE':
              tail_flags_count +=1
         else:
              pass
 
-    context = {'Eating:': eating_count,
-                'Running':running_count,
-                'Climbing':climbing_count,
-                'Chasing':chasing_count,
-                'Black Fur':black_count,
-                'Cinnamon Fur':cinnamon_count,
-                'Gray Fur':gray_count,
-                'Foraging':foraging_count,
-                'Flagging tails':tail_flags_count,
-                'Juvenile':juvenile_count,
-                'Adult': adult_count,
-                'Kuks':kuks_count,
-                'Quaas':quaas_count,
-                'Moans': moans_count,
+    details = {'Number of squirrels found eating': eating_count,
+                'Number of squirrels found running':running_count,
+                'Number of squirrels found climbing':climbing_count,
+                'Number of squirrels found chasing':chasing_count,
+                'Number of squirrels found with black fur':black_count,
+                'Number of squirrels found with cinnamon fur':cinnamon_count,
+                'Number of squirrels found with gray fur':gray_count,
+                'Number of squirrels found foraging':foraging_count,
+                'Number of squirrels found flagging tails':tail_flags_count,
+                'Number of squirrels found as a juvenile':juvenile_count,
+                'Number of squirrels found as a adult': adult_count,
+                'Number of squirrels found making kuk sounds':kuks_count,
+                'Number of squirrels found making quaas sounds':quaas_count,
+                'Number of squirrels found making moan sounds': moans_count,
             }
+    context = {"stats":details}
     return render(request, 'Squirrel_Sightings/stats.html', context)
 

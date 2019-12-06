@@ -176,5 +176,3 @@ class Squirrels(models.Model):
     def __str__(self):
         return self.Unique_Squirrel_Id
 
-
-# Create your models here.
