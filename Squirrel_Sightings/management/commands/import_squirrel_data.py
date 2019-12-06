@@ -46,4 +46,3 @@ class Command(BaseCommand):
                 print('Item ,{s}, has been saved')	
             except Exception as ex:
                 print(str(ex))
-
