@@ -3,11 +3,15 @@ table {
 }
 
 .helptext{
-  visibility: hidden;
+	color: #0066FF;
+	opacity: 0;  
 }
 
 th, td {
 	min-width: 150px;
 	padding: 10px;
 	border: 1px solid gray;
+}
+p {
+	margin-bottom: 50px;
 }
