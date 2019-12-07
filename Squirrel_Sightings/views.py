@@ -7,25 +7,8 @@ def view_all(request):
     context = {
             "sightings":Squirrels.objects.all(),"field_names":Squirrels._meta.get_fields()
         }
-<<<<<<< HEAD
-    return render(request, 'Squirrel_Sightings/index.html',context)
 
-#def all_squirrels(request):
-#    squirrels = Squirrels.objects.all()
-#    context = {
-#            "squirrels": squirrels,
-#        }
-#    return render(request, 'Squirrel_Sightings/index.html',context)
-
-#def sightings(request):
-#    squirrels = Squirrels.objects.all()
-#    context = {
-#            "squirrels": squirrels,
-#        }
-#    return render(request, 'Squirrel_Sightings/sightings.html', context)
-=======
     return render(request, 'Squirrel_Sightings/view_all.html',context)
->>>>>>> refs/remotes/origin/master
 
 def coordinates(request):
     squirrels  = Squirrels.objects.all()[:100]
@@ -41,7 +24,7 @@ def edit_squirrel(request, Unique_Squirrel_Id):
         form = SquirrelForm(request.POST, instance = squirrel)
         if form.is_valid():
             form.save()
-            return redirect(f'/Squirrel_Sightings/edit.html',context)
+            return redirect(f'/Squirrel_Sightings/{Unique_Squirrel_Id}',context)
     else:
         form = SquirrelForm(instance=squirrel)
     context = {
@@ -49,19 +32,20 @@ def edit_squirrel(request, Unique_Squirrel_Id):
         }
     return render(request, 'Squirrel_Sightings/edit.html', context)
 
+
 def add_squirrel(request):
     if request.method == 'POST':
         #check the form data
         form = SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(f'/Squirrel_Sightings/list/')
+            return redirect(f'/Squirrel_Sightings')
     else:
         form = SquirrelForm()
     context = {
             'form':form,
         }
-    return render(request, '/Squirrel_Sightings/edit.html', context)
+    return render(request, 'Squirrel_Sightings/add.html', context)
 
 def stats(request):
     black_count = 0
