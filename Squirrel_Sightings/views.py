@@ -24,7 +24,7 @@ def edit_squirrel(request, Unique_Squirrel_Id):
         form = SquirrelForm(request.POST, instance = squirrel)
         if form.is_valid():
             form.save()
-            return redirect(f'/Squirrel_Sightings/{Unique_Squirrel_Id}',context)
+            return redirect(f'/squirrel_sightings/')
     else:
         form = SquirrelForm(instance=squirrel)
     context = {
@@ -39,7 +39,7 @@ def add_squirrel(request):
         form = SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(f'/Squirrel_Sightings')
+            return redirect(f'/squirrel_sightings/')
     else:
         form = SquirrelForm()
     context = {

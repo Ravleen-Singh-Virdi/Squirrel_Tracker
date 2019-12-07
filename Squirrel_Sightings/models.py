@@ -4,16 +4,16 @@ from django.utils.translation import gettext as _
 class Squirrels(models.Model):
     AM = 'AM'
     PM = 'PM'
-    ADULT = 'adult'
-    JUVENILE = 'juvenile'
+    ADULT = 'Adult'
+    JUVENILE = 'Juvenile'
     BLANK = ''
     UNKNOWN = '?'
-    BLACK = 'black'
-    CINNAMON = 'cinnamon'
-    GRAY = 'gray'
-    GROUND_PLANE = 'ground plane'
-    ABOVE_GROUND = 'above ground'
-    OTHER = 'other'
+    BLACK = 'Black'
+    CINNAMON = 'Cinnamon'
+    GRAY = 'Gray'
+    GROUND_PLANE = 'Ground Plane'
+    ABOVE_GROUND = 'Above Ground'
+    OTHER = 'Other'
 
     SHIFT_CHOICES = (
             (AM, 'AM'),
@@ -56,9 +56,11 @@ class Squirrels(models.Model):
     )
     Date = models.DateField(
             help_text=_("Date"),
+
     )
     Age = models.CharField(
             max_length=50,
+            default=BLANK,
             choices=AGE_CHOICES,
             help_text=_("Age"),
     )
@@ -70,10 +72,12 @@ class Squirrels(models.Model):
     )
     Specific_Location = models.CharField(
             max_length=30,
+            default="",
             help_text=_("Specific Location"),
     )
     Primary_Fur_Color = models.CharField(
             max_length=20,
+            default=BLACK,
             choices=COLOR_CHOICES,
             help_text=_("Primary Fur Color"),
     )
