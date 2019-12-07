@@ -99,6 +99,7 @@ class Squirrels(models.Model):
     )
     Other_Activities = models.CharField(
             max_length=100,
+            default=None,
             help_text=_('Other activities'),
     )
     Kuks = models.BooleanField(
