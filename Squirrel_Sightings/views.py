@@ -63,15 +63,15 @@ def stats(request):
     moans_count = 0
     tail_flags_count=0
     for s in Squirrels.objects.all():
-        if s.Running == 'TRUE':
+        if s.Running == True:
              running_count +=1
         else:
              pass
-        if s.Climbing == 'TRUE':
+        if s.Climbing == True:
              climbing_count +=1
         else:
              pass
-        if s.Chasing == 'TRUE':
+        if s.Chasing == True:
              chasing_count +=1
         else:
              pass
@@ -83,11 +83,11 @@ def stats(request):
             gray_count +=1
         else:
             pass
-        if s.Foraging == 'TRUE':
+        if s.Foraging == True:
              foraging_count +=1
         else:
              pass
-        if s.Eating == 'TRUE':
+        if s.Eating == True:
              eating_count +=1
         else:
              pass
@@ -97,19 +97,19 @@ def stats(request):
             adult_count +=1
         else:
             pass
-        if s.Kuks == 'TRUE':
+        if s.Kuks == True:
             kuks_count +=1
         else:
             pass
-        if s.Quaas =='TRUE':
+        if s.Quaas == True:
             quaas_count +=1
         else:
             pass
-        if s.Moans == 'TRUE':
+        if s.Moans == True:
             moans_count +=1
         else:
             pass
-        if s.Tail_flags == 'TRUE':
+        if s.Tail_flags == True:
              tail_flags_count +=1
         else:
              pass

@@ -16,11 +16,11 @@ class Command(BaseCommand):
             data = list(reader)
         
         for item in data:
-            try:       
+            try:    
                 s = Squirrels(
-                    Unique_Squirrel_Id = item['UniqueSquirrelID'],
-                    Latitude = item['X'],
-                    Longitude = item['Y'],
+                    Unique_Squirrel_Id = item['\ufeffUniqueSquirrelID'],
+                    Latitude = item['Latitude'],
+                    Longitude = item['Longitude'],
                     Shift = item['Shift'],
                     Date = dt.datetime.strptime(item['Date'].strip(),'%m%d%Y').date(),
                     Age = item['Age'],
@@ -43,6 +43,6 @@ class Command(BaseCommand):
                     Runs_from = item['Runsfrom'],
                 )
                 s.save()
-                print('Item ,{s}, has been saved')	
+                print('Item ',{s},' has been saved')	
             except Exception as ex:
-                print(str(ex))
+                print('Error:',str(ex))

@@ -3,7 +3,6 @@
 <table>
 	<thead>
 		<tr>
-		  <th>Serial No.</th>
 		  <th>Unique Squirrel ID</th>
 		  <th>Latitude</th>
 		  <th>Longitude</th>
@@ -39,7 +38,6 @@
 	<tbody>
           {% for sighting in sightings %}
           <tr>
-                  <td>{{sighting.id}}</td>
 		  <td> <a href="{{sighting.Unique_Squirrel_Id}}/edit/">{{sighting.Unique_Squirrel_Id}}</a> </td>
                   <td>{{sighting.Latitude}} </td>
                   <td>{{sighting.Longitude}} </td>
