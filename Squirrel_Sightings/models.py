@@ -42,7 +42,8 @@ class Squirrels(models.Model):
     Unique_Squirrel_Id = models.CharField(
             max_length=30,
             help_text=_("Unique Squirrel ID"),
-        )
+            primary_key=True,
+    )
     
     Latitude = models.FloatField(help_text=_("Latitude"),)
 
@@ -96,9 +97,9 @@ class Squirrels(models.Model):
             default=False,
             help_text=_('Foraging'),
     )
-    Other_Activities = models.BooleanField(
-            default=False,
-            help_text=_('Other_Activities'),
+    Other_Activities = models.CharField(
+            max_length=100,
+            help_text=_('Other activities'),
     )
     Kuks = models.BooleanField(
             default=False,

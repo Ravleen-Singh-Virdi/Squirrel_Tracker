@@ -16,11 +16,11 @@ class Command(BaseCommand):
             data = list(reader)
         
         for item in data:
-            try:       
+            try:    
                 s = Squirrels(
-                    Unique_Squirrel_Id = item['UniqueSquirrelID'],
-                    Latitude = item['X'],
-                    Longitude = item['Y'],
+                    Unique_Squirrel_Id = item['\ufeffUniqueSquirrelID'],
+                    Latitude = item['Latitude'],
+                    Longitude = item['Longitude'],
                     Shift = item['Shift'],
                     Date = dt.datetime.strptime(item['Date'].strip(),'%m%d%Y').date(),
                     Age = item['Age'],
