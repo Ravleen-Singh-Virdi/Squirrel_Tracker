@@ -2,8 +2,6 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 class Squirrels(models.Model):
-    TRUE = 'true'
-    FALSE = 'false'
     AM = 'AM'
     PM = 'PM'
     ADULT = 'adult'
@@ -36,7 +34,7 @@ class Squirrels(models.Model):
         )
 
     LOC_CHOICES = (
-            (GROUND_PLANE, ' Ground Plane'),
+            (GROUND_PLANE, 'Ground Plane'),
             (ABOVE_GROUND, 'Above Ground'),
             (OTHER, 'Other'),
         )

@@ -43,6 +43,6 @@ class Command(BaseCommand):
                     Runs_from = item['Runsfrom'],
                 )
                 s.save()
-                print('Item ,{s}, has been saved')	
+                print('Item ',{s},' has been saved')	
             except Exception as ex:
-                print(str(ex))
+                print('Error:',str(ex))
