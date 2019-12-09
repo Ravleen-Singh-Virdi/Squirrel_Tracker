@@ -72,7 +72,7 @@
     + Location: */squirrel_sightings/stats*
 - [x] Map
     + A view that shows a map that displays the location of the squirrel sightings on an OpenStreets map
-    + Location: */map*
+    + Location: */squirrel_sightings/map*
     
 ## Web Application Demo 
 ### The main page
