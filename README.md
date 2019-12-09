@@ -11,36 +11,59 @@
     * Export: A command that can be used to export the data in CSV format.
 ### Supported fields for the sightings:
     * Latitude
+      - Integer Field
     * Longitude
+      - Integer Field
     * Unique Squirrel ID
+      - Character Field
     * Shift
+      - Character Field
     * Date
+      - DateTime Field
     * Age
+      - Like: 'Adult', Juvenile'
     * Primary Fur Color
+      - Like: 'Black', 'Cinnamon', 'Gray'
     * Location
+      -  Like: 'Ground Plane', 'Above Ground'
     * Specific Location
+      - Like: 'under a tree', 'on tree root', 'Branch', 'tree', etc.  
     * Running
+      - Boolean Field
     * Chasing
+      - Boolean Field
     * Climbing
+      - Boolean Field
     * Eating
+      - Boolean Field
     * Foraging
+      - Boolean Field
     * Other Activities
+       - Like: 'Wrestling With Mother', 'Moving Slowly', 'Gathering Acorns', etc.
     * Kuks
+      - Boolean Field
     * Quaas
+      - Boolean Field
     * Moans
+      - Boolean Field
     * Tail flags
+      - Boolean Field
     * Tail twitches
+      - Boolean Field
     * Approaches
+      - Boolean Field
     * Indifferent
+      - Boolean Field
     * Runs from
+      - Boolean Field
 
 ## Web Application Features
 - [x] All
-    + A view where a user can select between viewing the stats or adding/updating a squirrel sighting
+    + A view where a user can select between viewing the maps, stats or adding/updating a squirrel sighting
     + Location: */squirrel_sightings/*
 - [x] Edit
     + A view to update a particular sighting. 
-    + Location: */sightings/unique_squirrel_id/edit*
+    + Location: */sightings/<unique_squirrel_id>/edit*
 - [x] Add
     + A view to create a new sighting. 
     + Location: */sightings/add*
