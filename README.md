@@ -35,9 +35,6 @@
     * Runs from
 
 ## Web Application Features
-- [x] Map
-    + A view that shows a map that displays the location of the squirrel sightings on an OpenStreets map
-    + Location: */map*
 - [x] All
     + A view where a user can select between viewing the stats or adding/updating a squirrel sighting
     + Location: */squirrel_sightings/*
@@ -50,6 +47,21 @@
 - [x] Stats
     + A view with general stats about the sightings.
     + Location: */squirrel_sightings/stats*
+- [x] Map
+    + A view that shows a map that displays the location of the squirrel sightings on an OpenStreets map
+    + Location: */map*
+    
+## Web Application Demo 
+### The main page
+![Screenshot](5.png)
+### Edit page
+![Screenshot](4.png)
+### Add page
+![Screenshot](3.png)
+### Stats page
+![Screenshot](2.png)
+### Map View page
+![Screenshot](1.png)
 
 ### Project Group and UNI
     * Project Group 14, Section 1
