@@ -3,6 +3,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from . models import Squirrels
 from .forms import SquirrelForm
 
+def landing(request):
+    return render(request, 'Squirrel_Sightings/landing.html')
+
 def view_all(request):
     context = {
             "sightings":Squirrels.objects.all(),"field_names":Squirrels._meta.get_fields()
@@ -24,7 +27,7 @@ def edit_squirrel(request, Unique_Squirrel_Id):
         form = SquirrelForm(request.POST, instance = squirrel)
         if form.is_valid():
             form.save()
-            return redirect(f'/squirrel_sightings/')
+            return redirect(f'/squirrel_sightings/view/')
     else:
         form = SquirrelForm(instance=squirrel)
     context = {

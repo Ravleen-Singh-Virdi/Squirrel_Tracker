@@ -1,7 +1,13 @@
 <!doctype>
 <html>
-  <body>
-    <form method="post">
+    <body style="background-color:#EBC4A3;">
+    <form action='view/' method="GET">
+        <button type='button' onclick="history.back()"  style="background-color:#7E3817; color:#ffffff; font-size:15px;">BACK</button>
+    </form>
+
+    <p align="center" style="color:#7E3817; font-size:30px;">EDIT A SQUIRREL SIGHTING</p>
+    <div style="margin-left:37%;">
+    <form method="post" style="color:#7E3817;">
       {% csrf_token %} <!--wraps functions/template tags-->
       {{ form.Unique_Squirrel_Id.label}}:     {{ form.Unique_Squirrel_Id }}<br><br>
 	{{ form.Latitude.label}}:      		{{ form.Latitude }}<br><br>
@@ -26,9 +32,9 @@
 	{{ form.Approaches.label}}:      	{{ form.Approaches }}<br><br>
 	{{ form.Indifferent.label}}:      	{{ form.Indifferent }}<br><br>
 	{{ form.Runs_from.label}}:      	{{ form.Runs_from }}<br><br>
-
-      <br>
-      <input type="submit" name="Submit">
+      
+      <input type="submit" name="Submit" style="background-color:#7E3817; color:#ffffff; font-size:15px;">
     </form>
+    </div>
   </body>
 </html>
