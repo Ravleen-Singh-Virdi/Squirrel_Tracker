@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="{% static 'Squirrel_Sightings/style.css' %}">
 
 <form action="/landing.html" method="GET">
-        <button type='submit' style="background-color:#7E3817; color:#ffffff; font-size:15px;">BACK</button>
 </form>
 
 <p align="center" style="color:#7E3817; font-size:30px;">SQUIRREL SIGHTINGS IN CENTRAL PARK</p>
@@ -26,29 +25,29 @@
 	<tbody>
           {% for sighting in sightings %}
           <tr>
-		  <td> <a href="{{sighting.Unique_Squirrel_Id}}/edit/">{{sighting.Unique_Squirrel_Id}}</a> </td>
-                  <td>{{sighting.Latitude}} </td>
-                  <td>{{sighting.Longitude}} </td>
-		  <td>{{sighting.Shift}} </td>
-		  <td>{{sighting.Date}} </td>
-                  <td>{{sighting.Age}} </td>
-                  <td>{{sighting.Location}} </td>
-                  <td>{{sighting.Specific_Location}} </td>
-                  <td>{{sighting.Primary_Fur_Color}} </td>
-                  <td>{{sighting.Running}} </td>
-                  <td>{{sighting.Chasing}} </td>
-                  <td>{{sighting.Climbing}} </td>
-                  <td>{{sighting.Eating}} </td>
-                  <td>{{sighting.Foraging}} </td>
-                  <td>{{sighting.Other_Activities}} </td>
-                  <td>{{sighting.Kuks}} </td>
-                  <td>{{sighting.Quaas}} </td>
-                  <td>{{sighting.Moans}} </td>
-                  <td>{{sighting.Tail_flags}} </td>
-                  <td>{{sighting.Tail_twitches}} </td>
-                  <td>{{sighting.Approaches}} </td>
-                  <td>{{sighting.Indifferent}} </td>
-                  <td>{{sighting.Runs_from}} </td>
+		  <td align="center" > <a href="{{sighting.Unique_Squirrel_Id}}/edit/">{{sighting.Unique_Squirrel_Id}}</a> </td>
+                  <td align="center" >{{sighting.Latitude}} </td>
+                  <td align="center" >{{sighting.Longitude}} </td>
+		  <td align="center" >{{sighting.Shift}} </td>
+		  <td align="center" >{{sighting.Date}} </td>
+                  <td align="center" >{{sighting.Age}} </td>
+                  <td align="center" >{{sighting.Location}} </td>
+                  <td align="center" >{{sighting.Specific_Location}} </td>
+                  <td align="center" >{{sighting.Primary_Fur_Color}} </td>
+                  <td align="center" >{{sighting.Running}} </td>
+                  <td align="center">{{sighting.Chasing}} </td>
+                  <td align="center" >{{sighting.Climbing}} </td>
+                  <td align="center" >{{sighting.Eating}} </td>
+                  <td align="center" >{{sighting.Foraging}} </td>
+                  <td align="center" >{{sighting.Other_Activities}} </td>
+                  <td align="center" >{{sighting.Kuks}} </td>
+                  <td align="center" >{{sighting.Quaas}} </td>
+                  <td align="center" >{{sighting.Moans}} </td>
+                  <td align="center" >{{sighting.Tail_flags}} </td>
+                  <td align="center" >{{sighting.Tail_twitches}} </td>
+                  <td align="center" >{{sighting.Approaches}} </td>
+                  <td align="center" >{{sighting.Indifferent}} </td>
+                  <td align="center" >{{sighting.Runs_from}} </td>
           </tr>
           {% endfor %}		
 	</tbody>

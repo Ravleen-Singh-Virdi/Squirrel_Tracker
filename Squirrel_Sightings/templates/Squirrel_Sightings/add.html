@@ -1,7 +1,13 @@
-<!doctype>  
-<html>  
-  <body>    
-    <form method="post">
+<!doctype>
+<html>
+<body style="background-color:#EBC4A3;">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Squirrel_Sightings/style.css' %}">
+<form action="/landing.html" method="GET">
+</form>
+<p align="center" style="color:#7E3817; font-size:30px;">SQUIRREL SIGHTINGS IN CENTRAL PARK</p>
+<p align="center" style="color:#7E3817; font-size:20px;">To add a squirrel sighting, fill the information below</p>
+    <form method="post" style="color:#7E3817; margin-left:40%;">
       {% csrf_token %} <!--wraps functions/template tags-->
       {{ form.Unique_Squirrel_Id.label}}:     {{ form.Unique_Squirrel_Id }}<br><br>
         {{ form.Latitude.label}}:               {{ form.Latitude }}<br><br>
@@ -27,7 +33,7 @@
         {{ form.Indifferent.label}}:            {{ form.Indifferent }}<br><br>
         {{ form.Runs_from.label}}:              {{ form.Runs_from }}<br><br>
       <br>  
-      <input type="submit" name="Submit">
+      <button type='submit' style="background-color:#7E3817; color:#ffffff; font-size:15px;">SUBMIT</button>
     </form> 
   </body>
 </html>  
