@@ -86,10 +86,13 @@
 ### Map View page
 ![Screenshot](1.png)
 
+### Project Group and UNI
+    * Project Group 14, Section 1
+    * UNI: adj2141 (Aasma John), rv2428 (Ravleen Singh)
+    
+
 ### Link to the server
 https://stone-facility-253422.appspot.com/
 
-### Project Group and UNI
-    * Project Group 14, Section 1
-    * UNI: adj2141, rv2428
+
 
