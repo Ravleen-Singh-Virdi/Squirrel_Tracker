@@ -4,7 +4,7 @@ from . models import Squirrels
 from .forms import SquirrelForm
 
 def landing(request):
-    return render(request, 'Squirrel_Sightings/landing.html')
+    return render(request, 'landing.html')
 
 def view_all(request):
     context = {
