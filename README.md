@@ -65,7 +65,7 @@
 
 ### Contributors:
 * Ravleen Singh Virdi & Aasma John
-Columbai University Graduates with a master's degree in Business Analytics
+* Columbia University Graduates with a master's degree in Business Analytics
     
 
 ### Link to the server (currently inactive!)
