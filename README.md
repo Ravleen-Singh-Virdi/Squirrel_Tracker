@@ -2,7 +2,7 @@
 
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDmxds7w_jy3_ZUSU7n9mxwqa-EwfldIOv0kIfusMwLYt7OYeY&s.jpg)
 </h1>
-<h4 align="center">Squirrel Tracker is a web based application, built with the Django framework, designed to track squirrel sightings in Central Park, New York. The web application imported data from the  <a href="https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw">2018 Central Park Squirrel Census</a> and allows a user to add, update, and view squirrel data. 
+<h4 align="center">Squirrel Tracker is a web based application, built with the Django framework, designed to track squirrel sightings in Central Park, New York. The web application imports data from the  <a href="https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw">2018 Central Park Squirrel Census</a> and allows a user to add, update, and view squirrel data. 
 </h4>
 
 ## Project Features:
