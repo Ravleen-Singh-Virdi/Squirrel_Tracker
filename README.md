@@ -10,52 +10,29 @@
     * Import: A command that can be used to import the data from the 2018 census file.
     * Export: A command that can be used to export the data in CSV format.
 ### Supported fields for the sightings:
-    * Latitude
-      - Integer Field
-    * Longitude
-      - Integer Field
-    * Unique Squirrel ID
-      - Character Field
-    * Shift
-      - Character Field
-    * Date
-      - DateTime Field
-    * Age
-      - Like: 'Adult', Juvenile'
-    * Primary Fur Color
-      - Like: 'Black', 'Cinnamon', 'Gray'
-    * Location
-      -  Like: 'Ground Plane', 'Above Ground'
-    * Specific Location
-      - Like: 'under a tree', 'on tree root', 'Branch', 'tree', etc.  
-    * Running
-      - Boolean Field
-    * Chasing
-      - Boolean Field
-    * Climbing
-      - Boolean Field
-    * Eating
-      - Boolean Field
-    * Foraging
-      - Boolean Field
-    * Other Activities
-       - Like: 'Wrestling With Mother', 'Moving Slowly', 'Gathering Acorns', etc.
-    * Kuks
-      - Boolean Field
-    * Quaas
-      - Boolean Field
-    * Moans
-      - Boolean Field
-    * Tail flags
-      - Boolean Field
-    * Tail twitches
-      - Boolean Field
-    * Approaches
-      - Boolean Field
-    * Indifferent
-      - Boolean Field
-    * Runs from
-      - Boolean Field
+    * Latitude             - Integer Field
+    * Longitude            - Integer Field
+    * Unique Squirrel ID   - Character Field
+    * Shift                - Character Field
+    * Date                 - DateTime Field
+    * Age                  - Like: 'Adult', Juvenile'
+    * Primary Fur Color    - Like: 'Black', 'Cinnamon', 'Gray'
+    * Location             - Like: 'Ground Plane', 'Above Ground'
+    * Specific Location    - Like: 'under a tree', 'on tree root', 'Branch', 'tree', etc.  
+    * Running              - Boolean Field
+    * Chasing              - Boolean Field
+    * Climbing             - Boolean Field
+    * Eating               - Boolean Field
+    * Foraging             - Boolean Field
+    * Other Activities     - Like: 'Wrestling With Mother', 'Moving Slowly', 'Gathering Acorns', etc.
+    * Kuks                 - Boolean Field
+    * Quaas                - Boolean Field
+    * Moans                - Boolean Field
+    * Tail flags           - Boolean Field
+    * Tail twitches        - Boolean Field
+    * Approaches           - Boolean Field
+    * Indifferent          - Boolean Field
+    * Runs from            - Boolean Field
 
 ## Web Application Features
 - [x] All
@@ -86,12 +63,12 @@
 ### Map View page
 ![Screenshot](1.png)
 
-### Project Group and UNI
-    * Project Group 14, Section 1
-    * UNI: adj2141 (Aasma John), rv2428 (Ravleen Singh)
+### Contributors:
+* Ravleen Singh Virdi & Aasma John
+Columbai University Graduates with a master's degree in Business Analytics
     
 
-### Link to the server
+### Link to the server (currently inactive!)
 https://stone-facility-253422.appspot.com/
 
 
