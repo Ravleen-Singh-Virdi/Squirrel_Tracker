@@ -5,3 +5,4 @@ handlers:
   static_dir: collected-static/
 - url: /.*
   script: auto
+  
